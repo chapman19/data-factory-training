@@ -1,0 +1,13 @@
+{
+	"name": "HttpServer1",
+	"properties": {
+		"description": "Movie Database",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "echo \"# data-factory-training\" >> README.md",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
