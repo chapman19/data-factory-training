@@ -16,9 +16,12 @@
 			"transformations": [
 				{
 					"name": "Select1"
+				},
+				{
+					"name": "Filter1"
 				}
 			],
-			"script": "source(output(\n\t\tmovie as string,\n\t\ttitle as string,\n\t\tgenres as string,\n\t\tyear as string,\n\t\tRating as string,\n\t\t{Rotton Tomato} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\twildcardPaths:['output/2514e789-37b9-454a-95f9-6709e85c02e1.txt']) ~> source1\nsource1 select(mapColumn(\n\t\teach(match(name=='movie'),\n\t\t\t'movie' = $$),\n\t\teach(match(name=='title'),\n\t\t\t'title' = $$),\n\t\teach(match(name=='genres'),\n\t\t\t'genres' = $$),\n\t\teach(match(name=='year'),\n\t\t\t'year' = $$),\n\t\teach(match(name=='Rating'),\n\t\t\t'Rating' = $$),\n\t\teach(match(name=='Rotton Tomato'),\n\t\t\t'Rotten Tomato' = $$)\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1"
+			"script": "source(output(\n\t\tmovie as string,\n\t\ttitle as string,\n\t\tgenres as string,\n\t\tyear as string,\n\t\tRating as string,\n\t\t{Rotton Tomato} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\twildcardPaths:['output/2514e789-37b9-454a-95f9-6709e85c02e1.txt']) ~> source1\nsource1 select(mapColumn(\n\t\teach(match(name=='movie'),\n\t\t\t'movie' = $$),\n\t\teach(match(name=='title'),\n\t\t\t'title' = $$),\n\t\teach(match(name=='genres'),\n\t\t\t'genres' = $$),\n\t\teach(match(name=='year'),\n\t\t\t'year' = $$),\n\t\teach(match(name=='Rating'),\n\t\t\t'Rating' = $$),\n\t\teach(match(name=='Rotton Tomato'),\n\t\t\t'Rotten Tomato' = $$)\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1\nSelect1 filter(toInteger(year) > 1950) ~> Filter1"
 		}
 	}
 }
