@@ -21,27 +21,27 @@
 		},
 		"schema": [
 			{
-				"name": "Prop_0",
+				"name": "movie",
 				"type": "String"
 			},
 			{
-				"name": "Prop_1",
+				"name": "title",
 				"type": "String"
 			},
 			{
-				"name": "Prop_2",
+				"name": "genres",
 				"type": "String"
 			},
 			{
-				"name": "Prop_3",
+				"name": "year",
 				"type": "String"
 			},
 			{
-				"name": "Prop_4",
+				"name": "Rating",
 				"type": "String"
 			},
 			{
-				"name": "Prop_5",
+				"name": "Rotton Tomato",
 				"type": "String"
 			}
 		]
