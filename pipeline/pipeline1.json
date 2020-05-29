@@ -36,72 +36,7 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "movie",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 1
-								}
-							},
-							{
-								"source": {
-									"name": "title",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 2
-								}
-							},
-							{
-								"source": {
-									"name": "genres",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 3
-								}
-							},
-							{
-								"source": {
-									"name": "year",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 4
-								}
-							},
-							{
-								"source": {
-									"name": "Rating",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 5
-								}
-							},
-							{
-								"source": {
-									"name": "Rotton Tomato",
-									"type": "String"
-								},
-								"sink": {
-									"type": "String",
-									"ordinal": 6
-								}
-							}
-						]
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
